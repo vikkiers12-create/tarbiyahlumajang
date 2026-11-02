@@ -1,0 +1,8 @@
+{
+  "name": "PMII Rayon Tarbiyah - Portal Resmi & Pendaftaran Anggota Baru",
+  "description": "Website resmi dan portal pendaftaran anggota baru (MAPABA) PMII Rayon Tarbiyah, galeri kegiatan kaderisasi, dan manajemen pengurus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

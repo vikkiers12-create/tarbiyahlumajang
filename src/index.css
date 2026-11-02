@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    scroll-behavior: smooth;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark, html.dark body {
+    color: #f1f5f9;
+    background-color: #090d16;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+@media print {
+  /* Clean print view for official registration PDF document */
+  header, footer, nav, aside, .no-print, [role="dialog"] > div > button.close-btn {
+    display: none !important;
+  }
+  
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  .printable-receipt {
+    box-shadow: none !important;
+    border: 1px solid #94a3b8 !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  .printable-receipt * {
+    color: #000000 !important;
+  }
+
+  .printable-receipt .text-white {
+    color: #ffffff !important;
+  }
+
+  .printable-receipt .bg-navy {
+    background-color: #0c1b69 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
